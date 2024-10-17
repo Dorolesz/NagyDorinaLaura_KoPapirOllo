@@ -15,7 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private Button Ko, Papir, Ollo;
-    private TextView Player, Computer;
+    private TextView Player, Computer, Eredmeny;
     private Random random;
     String[] choices = {"Kő", "Papír", "Olló"};
 
@@ -34,25 +34,25 @@ public class MainActivity extends AppCompatActivity {
         Ollo = findViewById(R.id.olloButton);
         Player = findViewById(R.id.teValasztasod);
         Computer = findViewById(R.id.gepValasztasa);
+        Eredmeny = findViewById(R.id.eredmeny);
 
         Ko.setOnClickListener(view -> Game("Kő"));
         Papir.setOnClickListener(view -> Game("Papír"));
         Ollo.setOnClickListener(view -> Game("Olló"));
-
-        public void Game(String playerChoice) {
-            String computerChoice = choices[random.nextInt(3)];
-
-            if (playerChoice.equals(computerChoice)) {
-                eredmeny.setText("Döntetlen");}
-                else if ((playerChoice.equals("Kő") && computerChoice.equals("Olló")) ||
-                    (playerChoice.equals("Papír") && computerChoice.equals("Kő")) ||
-                    (playerChoice.equals("Olló") && computerChoice.equals("Papír")) {
-                eredmeny.setText("Nyertél!");
-            } else {
-            eredmeny.setText("Vesztettél");}
-
         }
 
+    public void Game(String playerChoice) {
+        String computerChoice = choices[random.nextInt(3)];
+
+        if (playerChoice.equals(computerChoice)) {
+            Eredmeny.setText("Döntetlen");
+        } else if ((playerChoice.equals("Kő") && computerChoice.equals("Olló")) ||
+                (playerChoice.equals("Papír") && computerChoice.equals("Kő")) ||
+                (playerChoice.equals("Olló") && computerChoice.equals("Papír"))) {
+            Eredmeny.setText("Nyertél!");
+        } else {
+            Eredmeny.setText("Vesztettél");
+        }
 
     }
 }

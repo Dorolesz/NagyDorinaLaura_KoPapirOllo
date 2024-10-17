@@ -43,22 +43,26 @@
         android:text="Eredmény: Ember: 0 Computer: 0"
         android:textSize="23dp"/>
 
-    <Button
-        android:id="@+id/koButton"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kő"/>
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/papirButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Papír"/>
+        <Button
+            android:id="@+id/koButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kő"/>
 
-    <Button
-        android:id="@+id/olloButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Olló"/>
+        <Button
+            android:id="@+id/papirButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Papír"/>
+
+        <Button
+            android:id="@+id/olloButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olló"/>
 
 </LinearLayout>
